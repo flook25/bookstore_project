@@ -1,33 +1,21 @@
-<!-- filepath: /Users/bifook/Desktop/Django/app_general/templates/app_general/about.html -->
 {% extends "app_general/components/base.html" %}
 
 {% block content %}
     <div class="books-list">
         <h2>Our Featured Books</h2>
-        <div class="book-item">
-            <img src="https://cdn-icons-png.flaticon.com/128/29/29302.png" alt="Book 1">
-            <div class="book-info">
-                <p class="book-title">Python Programming 101</p>
-                <p class="book-author">by John Doe</p>
-                <p class="book-price">฿350</p>
+        {% for book in books %}
+            <div class="book-item">
+                <img src="{{ book.img }}" alt="Book: {{ book.title }}">
+                <div class="book-info">
+                    <p class="book-title">
+                        <a href="{% url 'book' book.id %}">{{ book.title }}</a>
+                    </p>
+                    <p class="book-author">by {{ book.author }}</p>
+                    <p class="book-price">฿{{ book.price }}</p>
+                </div>
             </div>
-        </div>
-        <div class="book-item">
-            <img src="https://cdn-icons-png.flaticon.com/128/29/29302.png" alt="Book 2">
-            <div class="book-info">
-                <p class="book-title">Django for Beginners</p>
-                <p class="book-author">by Jane Smith</p>
-                <p class="book-price">฿420</p>
-            </div>
-        </div>
-        <div class="book-item">
-            <img src="https://cdn-icons-png.flaticon.com/128/29/29302.png" alt="Book: R Programming for Data Science">
-            <div class="book-info">
-                <p class="book-title">R Programming for Data Science</p>
-                <p class="book-author">by Jane Miller</p>
-                <p class="book-price">฿390</p>
-            </div>
-        </div>
-        <!-- Add more book items as needed -->
+        {% empty %}
+            <p>No books available.</p>
+        {% endfor %}
     </div>
 {% endblock %}

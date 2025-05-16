@@ -1,13 +1,13 @@
-<!-- filepath: /Users/bifook/Desktop/Django/app_general/templates/app_general/home.html -->
 {% extends "app_general/components/base.html" %}
 
 {% block content %}
     <h1>Flook Learning Store 🛒</h1>
-<p>
-    ยินดีต้อนรับสู่ Flook Learning Store — ร้านหนังสือสำหรับทุกคนที่รักการอ่านและการเรียนรู้! 📚<br>
-    Welcome to Flook Learning Store, your one-stop shop for inspiring reads and educational treasures!<br>
-    Whether you're hunting for the latest bestsellers, academic resources, or hidden gems, we’ve got something for every curious mind.<br>
-    เพลิดเพลินกับบรรยากาศการอ่านที่อบอุ่น พร้อมหนังสือหลากหลายประเภทที่คัดสรรมาอย่างดี เพื่อเติมเต็มความรู้และจินตนาการของคุณ 🤓📖
-</p>
-
+    <p>
+        ยินดีต้อนรับ ลูกค้าทุกคนที่รักในการอ่าน และ การเรียนรู้🤩<br>
+        Welcome to all book lovers and knowledge seekers!<br>
+        Discover a wide range of books, from bestsellers to educational materials, and enjoy a cozy reading experience with us.
+    </p>
+    <div style="background: linear-gradient(90deg, #ffe082 0%, #ffd54f 100%); color: #222; border-radius: 12px; padding: 18px 24px; margin: 32px auto 24px auto; max-width: 700px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 1.15em; text-align: center;">
+        🎉 <b>Special Offer:</b> Get 10% off all new arrivals this month! <a href="{% url 'books' %}" style="color: #1564f7; text-decoration: underline; font-weight: bold;">Shop Now</a>
+    </div>
 {% endblock %}
