@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flook Learning Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6fb;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4f8cff;
+            color: #fff;
+            padding: 20px 0 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        nav {
+            margin-bottom: 10px;
+        }
+        nav a {
+            background: #fff;
+            color: #4f8cff;
+            text-decoration: none;
+            padding: 8px 18px;
+            margin: 0 8px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            border: 1px solid #4f8cff;
+        }
+        nav a:hover {
+            background: #4f8cff;
+            color: #fff;
+        }
+        .main-content {
+            background-color: #fff;
+            margin: 30px auto 0 auto;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 30px 24px;
+            text-align: center;
+        }
+        .main-content h1 {
+            color: #4f8cff;
+            margin-bottom: 12px;
+        }
+        .main-content p {
+            font-size: 1.1em;
+            color: #333;
+        }
+        footer {
+            background: #e9ecef;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            margin-top: 40px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #4f8cff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    {% include "app_general/components/site_header.html" %}
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+    {% include "app_general/components/site_footer.html" %}
+</body>
+</html>
